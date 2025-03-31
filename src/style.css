@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-dark text-gray-200 min-h-screen;
+  }
+  h1 {
+    @apply text-4xl font-bold mb-6 text-white;
+  }
+  h2 {
+    @apply text-3xl font-bold mb-4 text-white;
+  }
+  h3 {
+    @apply text-2xl font-bold mb-3 text-white;
+  }
+  h4 {
+    @apply text-xl font-bold mb-2 text-white;
+  }
+  p {
+    @apply mb-4;
+  }
+  a {
+    @apply text-primary transition-colors duration-200 hover:text-primary-light;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-light;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-light;
+  }
+  .card {
+    @apply bg-dark-light rounded-lg p-6 mb-4 shadow-md border border-dark/50 hover:shadow-lg transition-shadow duration-200;
+  }
+  .futuristic-border {
+    @apply relative overflow-hidden rounded-lg border border-primary/30;
+  }
+  .futuristic-border::before {
+    @apply content-[""] absolute -inset-1 bg-gradient-to-r from-primary to-secondary opacity-30 blur-sm transition-all duration-500;
+  }
+  .futuristic-border:hover::before {
+    @apply opacity-60 -inset-2;
+  }
+  .glow-text {
+    @apply text-white drop-shadow-[0_0_5px_rgba(139,92,246,0.7)];
+  }
+  .neon-line {
+    @apply h-px bg-gradient-to-r from-primary via-secondary to-accent;
+  }
+} 
